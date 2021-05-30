@@ -50,6 +50,7 @@ void tanqueLavagem3();
 void secadorBiodiesel();
 void tanqueBiodiesel();
 
+//Marcelo Shinji
 int main(int argc, char *argv[])
 { //main
 
@@ -76,7 +77,7 @@ int main(int argc, char *argv[])
 
   return 0;
 }
-
+//Bruno Ducati
 void *threadComponente(void *arg)
 {
   int valorThread = *(int *)arg;
@@ -146,7 +147,7 @@ void *threadComponente(void *arg)
 
   return 0;
 }
-
+//Bruno Ducati
 void oleoResidualFritura()
 {
   int tempo = (rand() % (1000 * 1000 * 10));
@@ -158,7 +159,7 @@ void oleoResidualFritura()
   cout << "Óleo: " << oleo << endl;
   usleep((1000 * 10000) - tempo);
 }
-
+//Bruno Ducati
 void tanqueOleo()
 {
   if (reator[0] < 1.25 && oleo >= 1.25)
@@ -169,7 +170,7 @@ void tanqueOleo()
     oleo -= oleoRestante;
   }
 }
-
+//Bruno Ducati
 void tanqueReator()
 {
 
@@ -179,7 +180,7 @@ void tanqueReator()
 
   if (reator[0] >= 1.25 && reator[1] >= 1.25 && reator[2] >= 2.50)
   {
-    //cout << "Tanque do Reator ENCHEU" << endl;
+    cout << "Tanque do Reator ENCHEU" << endl;
     tanqueReatorEncheu = true;
     if (!reatorAtivo)
       cout << "O REATOR lançou os produtos quimicos para o DECANTADOR." << endl;
@@ -188,7 +189,7 @@ void tanqueReator()
 
   usleep(1000 * 1000);
 }
-
+//Marcelo Shinji
 void tanqueDecantador()
 {
   if (decantador < 10.0 && tanqueReatorEncheu)
@@ -201,7 +202,7 @@ void tanqueDecantador()
     reator[1] = 0;
     reator[2] = 0;
 
-    //cout << "PAUSA DO DECANTADOR" << endl;
+    cout << "PAUSA DO DECANTADOR" << endl;
 
     usleep(1000 * 5000 * 1.66);
 
@@ -225,7 +226,7 @@ void tanqueDecantador()
     cout << "O DECANTADOR lançou os produtos quimicos." << endl;
   }
 }
-
+//Bruno Ducati
 void secadorDecantador()
 {
   if (secadorEtohAtivo == true)
@@ -236,7 +237,7 @@ void secadorDecantador()
     usleep(1000 * 5000);
   }
 }
-
+//Marcelo Shinji
 void tanqueNaOH_EtOH()
 {
   usleep(1000 * 1000);
@@ -261,7 +262,7 @@ void tanqueNaOH_EtOH()
     etoh -= etohRestante;
   }
 }
-
+//Bruno Ducati
 void tanqueLavagem1()
 {
   if (lavagemAtiva[0] && solucaoLavagem > 0)
@@ -280,7 +281,7 @@ void tanqueLavagem1()
     }
   }
 }
-
+//Bruno Ducati
 void tanqueLavagem2()
 {
   if (lavagemAtiva[1])
@@ -294,7 +295,7 @@ void tanqueLavagem2()
     cout << "LAVAGEM 2: " << lavagem2 << endl;
   }
 }
-
+//Bruno Ducati
 void tanqueLavagem3()
 {
   if (lavagemAtiva[2])
@@ -310,7 +311,7 @@ void tanqueLavagem3()
     lavagem3 = 0;
   }
 }
-
+// Marcelo Shinji
 void secadorBiodiesel()
 {
   if (secadorBiodieselAtivo)

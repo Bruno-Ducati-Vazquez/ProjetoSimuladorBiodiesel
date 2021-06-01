@@ -50,7 +50,7 @@ void tanqueLavagem3();
 void secadorBiodiesel();
 void tanqueBiodiesel();
 
-//Marcelo Shinji
+//Bruno Ducati Vazquez
 int main(int argc, char *argv[])
 { //main
 
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 
   return 0;
 }
-//Bruno Ducati
+//Bruno Ducati Vazquez
 void *threadComponente(void *arg)
 {
   int valorThread = *(int *)arg;
@@ -147,7 +147,7 @@ void *threadComponente(void *arg)
 
   return 0;
 }
-//Bruno Ducati
+//Bruno Ducati Vazquez
 void oleoResidualFritura()
 {
   int tempo = (rand() % (1000 * 1000 * 10));
@@ -159,7 +159,7 @@ void oleoResidualFritura()
   cout << "Óleo: " << oleo << endl;
   usleep((1000 * 10000) - tempo);
 }
-//Bruno Ducati
+//Bruno Ducati Vazquez
 void tanqueOleo()
 {
   if (reator[0] < 1.25 && oleo >= 1.25)
@@ -170,7 +170,7 @@ void tanqueOleo()
     oleo -= oleoRestante;
   }
 }
-//Bruno Ducati
+//Bruno Ducati Vazquez
 void tanqueReator()
 {
 
@@ -189,7 +189,7 @@ void tanqueReator()
 
   usleep(1000 * 1000);
 }
-//Marcelo Shinji
+// Marcelo Shinji
 void tanqueDecantador()
 {
   if (decantador < 10.0 && tanqueReatorEncheu)
@@ -226,7 +226,7 @@ void tanqueDecantador()
     cout << "O DECANTADOR lançou os produtos quimicos." << endl;
   }
 }
-//Bruno Ducati
+//Marcelo Shinji
 void secadorDecantador()
 {
   if (secadorEtohAtivo == true)
@@ -262,7 +262,7 @@ void tanqueNaOH_EtOH()
     etoh -= etohRestante;
   }
 }
-//Bruno Ducati
+//Marcelo Shinji
 void tanqueLavagem1()
 {
   if (lavagemAtiva[0] && solucaoLavagem > 0)
@@ -281,7 +281,7 @@ void tanqueLavagem1()
     }
   }
 }
-//Bruno Ducati
+//Bruno Ducati Vazquez
 void tanqueLavagem2()
 {
   if (lavagemAtiva[1])
@@ -295,7 +295,7 @@ void tanqueLavagem2()
     cout << "LAVAGEM 2: " << lavagem2 << endl;
   }
 }
-//Bruno Ducati
+//Marcelo Shinji
 void tanqueLavagem3()
 {
   if (lavagemAtiva[2])
